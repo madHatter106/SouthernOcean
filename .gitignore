@@ -1,11 +1,6 @@
-
-\.ipynb_checkpoints/
-
-pikleJar/
+.ipynb_checkpoints/
 
 figJar/
-
-dataJar/
 
 __pycache__/
 
