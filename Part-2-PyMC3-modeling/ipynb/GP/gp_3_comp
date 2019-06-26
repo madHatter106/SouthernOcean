@@ -1,0 +1,30 @@
+digraph {
+	"σ" [label="σ ~ HalfNormal"]
+	"ℓ_psmooth" [label="ℓ_psmooth ~ Gamma"]
+	"ℓ_med" [label="ℓ_med ~ Gamma"]
+	"ℓ_pdecay" [label="ℓ_pdecay ~ Gamma"]
+	"η_noise" [label="η_noise ~ HalfNormal"]
+	"η_per" [label="η_per ~ HalfCauchy"]
+	"η_med" [label="η_med ~ HalfCauchy"]
+	"α" [label="α ~ Gamma"]
+	"ℓ_noise" [label="ℓ_noise ~ Gamma"]
+	period [label="period ~ Normal"]
+	"η_trend" [label="η_trend ~ HalfCauchy"]
+	"ℓ_trend" [label="ℓ_trend ~ Gamma"]
+	subgraph cluster244 {
+		y [label="y ~ MvNormal" style=filled]
+		label=244 labeljust=r labelloc=b style=rounded
+	}
+	"σ" -> y
+	"ℓ_psmooth" -> y
+	"ℓ_med" -> y
+	"ℓ_pdecay" -> y
+	"η_noise" -> y
+	"η_per" -> y
+	"ℓ_noise" -> y
+	"η_med" -> y
+	"α" -> y
+	period -> y
+	"η_trend" -> y
+	"ℓ_trend" -> y
+}
