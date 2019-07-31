@@ -5,3 +5,5 @@ figJar/
 __pycache__/
 
 refJar/
+
+*.nc
