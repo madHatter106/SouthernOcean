@@ -7,3 +7,5 @@ __pycache__/
 refJar/
 
 *.nc
+
+Part-2-PyMC3-modeling/pickleJar/model_results_nc/
