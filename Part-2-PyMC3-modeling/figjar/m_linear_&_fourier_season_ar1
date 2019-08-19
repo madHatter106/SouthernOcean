@@ -1,0 +1,29 @@
+digraph {
+	subgraph cluster8 {
+		fourier_coefs [label="fourier_coefs ~ Normal"]
+		label=8 labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster248 {
+		season [label="season ~ Deterministic" shape=box]
+		y_lik [label="y_lik ~ Normal" style=filled]
+		"μ" [label="μ ~ Deterministic" shape=box]
+		ar1 [label="ar1 ~ AR1"]
+		trend [label="trend ~ Deterministic" shape=box]
+		label=248 labeljust=r labelloc=b style=rounded
+	}
+	tau [label="tau ~ Gamma"]
+	k [label="k ~ Uniform"]
+	"σ" [label="σ ~ Exponential"]
+	slope [label="slope ~ Normal"]
+	intercept [label="intercept ~ Normal"]
+	fourier_coefs -> season
+	slope -> trend
+	intercept -> trend
+	tau -> ar1
+	k -> ar1
+	ar1 -> "μ"
+	trend -> "μ"
+	season -> "μ"
+	"σ" -> y_lik
+	"μ" -> y_lik
+}
