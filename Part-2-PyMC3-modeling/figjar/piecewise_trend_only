@@ -1,0 +1,16 @@
+digraph {
+	m [label="m ~ Normal"]
+	"σ" [label="σ ~ HalfCauchy"]
+	k [label="k ~ Normal"]
+	subgraph cluster248 {
+		trend [label="trend ~ Deterministic" shape=box]
+		"δ" [label="δ ~ Laplace"]
+		obs [label="obs ~ Normal" style=filled]
+		label=248 labeljust=r labelloc=b style=rounded
+	}
+	m -> trend
+	"δ" -> trend
+	k -> trend
+	"σ" -> obs
+	trend -> obs
+}
